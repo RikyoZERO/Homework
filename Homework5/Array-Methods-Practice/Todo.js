@@ -1,4 +1,5 @@
-{
+const tasks = [
+    {
 "userId": 1,
 "id": 1,
 "title": "delectus aut autem",
@@ -312,8 +313,16 @@
 
 // Filter user 3's todos, then log them & their incomplete count
 
-const user3Todos = todos.filter(task => task.userId === 3);
-console.log("User 3's To-Dos:", user3Todos);
+// const user3Todos = todos.filter(task => task.userId === 3);
+// console.log("User 3's To-Dos:", user3Todos);
 
-const incompleteCount = user3Todos.filter(task => !task.completed).length;
-console.log("Number of incomplete tasks for User 3:", incompleteCount);
+// const incompleteCount = user3Todos.filter(task => !task.completed).length;
+// console.log("Number of incomplete tasks for User 3:", incompleteCount);
+
+
+const user3tasks = tasks.filter(task => task.userId === 3 );
+console.log(user3tasks)
+ 
+console.log(user3tasks.filter(task => task.completed === false).length)
+
+

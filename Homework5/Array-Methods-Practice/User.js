@@ -260,7 +260,7 @@ console.log(phoneNumbers);
 
 
 
-const emailAddress = users.map(user => user.email.address)
+const emailAddress = users.map(user => user.email)
 console.log("list of Email Adresses")
 console.log(emailAddress)
 

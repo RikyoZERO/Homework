@@ -1,4 +1,4 @@
-
+const posts = [
 {
 "userId": 1,
 "id": 1,
@@ -301,35 +301,51 @@
 }
 ]
 
-//Examples//
+// //Examples//
 
-using forEach, print a list of cities from the data
+// using forEach, print a list of cities from the data
 
-data.forEach(user =>{
-    console.log(user.address.city)
+// data.forEach(user =>{
+//     console.log(user.address.city)
+// })
+
+// create an array of latitude and longitude coordinate pairs
+
+// const coordinates = [];
+
+// data.forEach((user) => {
+//     coordinates.push([user.username, user.address.geo.lat, user.username, user.address.geo.lng])
+// })
+// console.log(coordinates)
+
+// create an array of strings that combine the company's catchPhrase and bs
+// const companyCombo = [];
+// data.forEach(user => {
+//     companyCombo.push(`this company cares about${user.company.catchPhrase} and ${user.company.bs}`)
+// })
+
+// console.log(companyCombo)
+
+// // query the HTML for the class class-week, then use forEach to change the text content
+
+// const weeks = document.querySelectorAll(".class-week")
+
+// weeks.forEach((el,index) => {
+//     el.textContent = `this is changing for each element item ${index}`
+// } )
+
+
+// const user3tasks = tasks.filter(task => task.userId === 3 );
+// console.log(user3tasks)
+
+const user5posts = posts.filter(post => post.userId === 5 );
+console.log(user5posts)
+
+const user5bodyPairs = user5posts.map(post => { 
+    return { 
+        title: post.title, body: post.body
+
+    }
 })
 
-create an array of latitude and longitude coordinate pairs
-
-const coordinates = [];
-
-data.forEach((user) => {
-    coordinates.push([user.username, user.address.geo.lat, user.username, user.address.geo.lng])
-})
-console.log(coordinates)
-
-create an array of strings that combine the company's catchPhrase and bs
-const companyCombo = [];
-data.forEach(user => {
-    companyCombo.push(`this company cares about${user.company.catchPhrase} and ${user.company.bs}`)
-})
-
-console.log(companyCombo)
-
-// query the HTML for the class class-week, then use forEach to change the text content
-
-const weeks = document.querySelectorAll(".class-week")
-
-weeks.forEach((el,index) => {
-    el.textContent = `this is changing for each element item ${index}`
-} )
+console.log(user5bodyPairs)
